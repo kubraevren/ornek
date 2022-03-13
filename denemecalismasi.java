@@ -3,29 +3,23 @@ package deneme1;
 public class denemecalismasi {
 
 	public static void main(String[] args) {
-		// kalýn sesliler : a, ý, o, u
-		// ince sesliler : e , i, ö , ü
 
-		char harf = 'u';
-		boolean kalin = true;
-		char[] kalinlar = { 'a', 'ý', 'o', 'u' };
-		char[] inceler = { 'e', 'i', 'ö', 'ü' };
-
-		for (char myList : kalinlar) {
-			if (harf == myList) {
-				kalin = true;
+		int[] sayilar = new int[] { 1, 2, 5, 7, 9, 0 };
+		int aranacak = 10;
+		boolean sonuc = true;
+		for (int myList : sayilar) {
+			if (myList == aranacak) {
+				sonuc = true;
+				break; // döngüyü yani aramayý bitirsin.
+			} else {
+				sonuc = false;
 			}
 		}
-		for (char myList2 : inceler) {
-			if (harf == myList2) {
-				kalin = false;
-			}
+		if (sonuc == true) {
+			System.out.println("aranan sayý bulundu");
 		}
-		if (kalin)
-			System.out.println("kalýn seslidir");
-		else {
-			System.out.println("ince seslidir.");
+			else {
+			System.out.println("sayý bulunamadý");
 		}
-
 	}
 }
